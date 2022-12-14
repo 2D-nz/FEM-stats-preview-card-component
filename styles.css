@@ -1,0 +1,155 @@
+/* - Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6) */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+/* font-family: 'Lexend Deca', sans-serif; */
+
+body {
+	font-family: "Inter", sans-serif;
+	background-color: hsl(233, 47%, 7%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+b {
+	color: hsl(277, 64%, 61%);
+}
+
+h1 {
+	color: hsl(0, 0%, 100%);
+	font-weight: 700;
+}
+
+h2 {
+	color: hsl(0, 0%, 100%);
+}
+.container_main {
+	background-color: hsl(244, 38%, 16%);
+	max-width: 360px;
+	border-radius: 2.5%;
+	margin: 1rem;
+	margin-bottom: 0px;
+	overflow: hidden;
+	text-align: center;
+	display: grid;
+}
+
+.container_img {
+	position: relative;
+	margin: 0;
+}
+
+.info {
+	margin: 1rem;
+	align-items: center;
+}
+
+.info p {
+	line-height: 1.5rem;
+	margin: 1rem;
+}
+.container_img img {
+	height: 100%;
+}
+
+#img_desktop {
+	display: none;
+}
+.container_img::after {
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	outline: none;
+	margin: 0;
+	box-shadow: none;
+	padding: 0;
+	border: none;
+	background-color: hsla(277, 97%, 27%, 0.6);
+}
+
+.container_text {
+	color: hsla(0, 0%, 100%, 0.75);
+	font-size: 15px;
+	color: hsla(0, 0%, 100%, 0.75);
+}
+
+.container_main img {
+	width: 100%;
+}
+
+.stats {
+	margin-top: 2rem;
+}
+
+.stats h2 {
+	margin: 0.2rem;
+}
+
+.stats p {
+	color: hsla(0, 0%, 100%, 0.6);
+	margin-top: 0;
+	font-family: "Lexend Deca", sans-serif;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1200px) {
+	.container_main {
+		margin: 10%;
+		max-width: 900px;
+		max-height: 500px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.container_main :nth-of-type(1) {
+		order: 1;
+	}
+
+	.info {
+		margin: 3rem;
+		padding-right: 2rem;
+		text-align: left;
+		justify-content: center;
+	}
+
+	.info p {
+		margin: 0;
+	}
+
+	.stats {
+		display: flex;
+		gap: 3rem;
+	}
+
+	.stats :nth-child(1) {
+		order: 1;
+	}
+	.stats :nth-child(2) {
+		order: 2;
+	}
+
+	.stats :nth-child(3) {
+		order: 3;
+	}
+	#img_desktop {
+		display: block;
+	}
+	#img_mobile {
+		display: none;
+	}
+}
